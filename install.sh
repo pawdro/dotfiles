@@ -18,7 +18,7 @@ packages=(
 "tmux"
 "lua"
 "neovim"
-"weechat --with-lua --with-perl --with-python --with-ruby"
+"Caskroom/versions/iterm2-nightly"
 )
 
 for i in "${packages[@]}"
@@ -44,8 +44,8 @@ fi
 # Now lets clone my dotfiles repo into .dotfiles/
 echo "---------------------------------------------------------"
 
-echo "Cloning Mike's dotfiles insto .dotfiles"
-git clone https://github.com/mhartington/dotfiles.git ~/.dotfiles
+echo "Cloning pawdro's dotfiles insto .dotfiles"
+git clone https://github.com/pawdro/dotfiles.git ~/.dotfiles
 
 cd .dotfiles
 git submodule update --init --recursive
@@ -66,13 +66,10 @@ chsh -s $(which zsh)
 echo "You'll need to log out for this to take effect"
 echo "---------------------------------------------------------"
 
-echo "running oxs defaults"
-~./osx.sh
-
 echo "---------------------------------------------------------"
 echo "Downloading Hammerspoon"
 cd ~/Downloads
-curl https://github.com/Hammerspoon/hammerspoon/releases/download/0.9.43/Hammerspoon-0.9.43.zip | unzip
+curl https://github.com/Hammerspoon/hammerspoon/releases/download/0.9.52/Hammerspoon-0.9.52.zip | unzip
 unzip Hammerspoon-0.9.43.zip
 mv Hammerspoon /Applications/
 echo 'done'
